@@ -1,0 +1,31 @@
+	// Zach Dickinson Data Set Code
+var data = [
+	{name: Skyrim, console: Xbox 360, genre: RPG, rating: 10, completed: True}
+	{name: Dark Souls, console: Xbox 360, genre: RPG, rating: 8, completed: False}
+	{name: Minecraft, console: Xbox360, genre: Sandbox, rating: 8, completed: False}
+	{name: Super Smash Bros, console: Nintendo64, genre: fighting, rating: 9, completed: True}
+	{name: Paper Mario, console: Nintendo64, genre: RPG,rating: 7, completed: True}
+	{name: Super Mario 64, console: Nintendo64, genre: Adventure, rating: 8, completed: True}
+	{name: Star Fox 64, console: Nintendo64, genre: Shooter, rating: 7, completed: False}
+	{name: Banjo Kazooie, console: Nintendo64, genre: Adventure, rating: 6, completed: False}
+	{name: Banjo Tooie, console: Nintendo64, genre: Adventure, rating: 8, completed: False}
+	{name: The Legend of Zelda Ocarina of Time, console: Adventure, rating: 10, completed: True}
+	{name: The Legend of Zelda Majora's Mask, console: Nintendo64, genre: Adventure, rating: 10, completed: Fasle}
+	{name: Dissidia Final Fantasy, console: PSP, genre: Fighting, rating: 9, completed: True}
+	{name: Mortal Kombat, console: Super Nintendo, genre: Fighting, rating: 6, completed: True}
+	{name: Street Fighter, console: Super Nintendo, genre: Fighting, rating: 7, completed: True}
+	{name: Final Fantasy, console: Super Nintendo, genre: RPG, rating: 8, completed: True}
+	{name: Final Fantasy II, console: Super Nintendo, genre: RPG, rating: 7, completed: False}
+	{name: Final Fantasy X, console: Playstation 2, genre: RPG, rating: 10, completed: False}
+	{name: Kingdom Hearts, console: Playstation 2, genre: RPG, rating: 8, completed: True}
+	{name: Super Mario Sunshine, console: Gamecube, genre: Adventure, rating: 8, completed: True}
+]
+function filter(array, test) {
+	var passed = [];
+	for (var i = 0; i < array.length; i++){
+	if(test(array[i]))
+		passed.push(array[i]);
+	}
+	return passed;
+}
+console.log(filter(data, function(game){ return game.rating > 8}));
