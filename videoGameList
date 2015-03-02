@@ -1,31 +1,47 @@
 	// Zach Dickinson Data Set Code
 var data = [
-	{name: Skyrim, console: Xbox 360, genre: RPG, rating: 10, completed: True}
-	{name: Dark Souls, console: Xbox 360, genre: RPG, rating: 8, completed: False}
-	{name: Minecraft, console: Xbox360, genre: Sandbox, rating: 8, completed: False}
-	{name: Super Smash Bros, console: Nintendo64, genre: fighting, rating: 9, completed: True}
-	{name: Paper Mario, console: Nintendo64, genre: RPG,rating: 7, completed: True}
-	{name: Super Mario 64, console: Nintendo64, genre: Adventure, rating: 8, completed: True}
-	{name: Star Fox 64, console: Nintendo64, genre: Shooter, rating: 7, completed: False}
-	{name: Banjo Kazooie, console: Nintendo64, genre: Adventure, rating: 6, completed: False}
-	{name: Banjo Tooie, console: Nintendo64, genre: Adventure, rating: 8, completed: False}
-	{name: The Legend of Zelda Ocarina of Time, console: Adventure, rating: 10, completed: True}
-	{name: The Legend of Zelda Majora's Mask, console: Nintendo64, genre: Adventure, rating: 10, completed: Fasle}
-	{name: Dissidia Final Fantasy, console: PSP, genre: Fighting, rating: 9, completed: True}
-	{name: Mortal Kombat, console: Super Nintendo, genre: Fighting, rating: 6, completed: True}
-	{name: Street Fighter, console: Super Nintendo, genre: Fighting, rating: 7, completed: True}
-	{name: Final Fantasy, console: Super Nintendo, genre: RPG, rating: 8, completed: True}
-	{name: Final Fantasy II, console: Super Nintendo, genre: RPG, rating: 7, completed: False}
-	{name: Final Fantasy X, console: Playstation 2, genre: RPG, rating: 10, completed: False}
-	{name: Kingdom Hearts, console: Playstation 2, genre: RPG, rating: 8, completed: True}
-	{name: Super Mario Sunshine, console: Gamecube, genre: Adventure, rating: 8, completed: True}
+	{name:" Skyrim", console: "Xbox360", genre: "RPG", rating: 10, completed: "True", playtime: 19.5 },
+	{name: "DarkSouls", console: "Xbox360", genre: "RPG", rating: 8, completed: "False", playtime: 4.5},
+	{name: "Minecraft", console: "Xbox360", genre: "Sandbox", rating: 8, completed: "False", playtime: 6},
+	{name: "Super Smash Bros", console: "Nintendo64", genre: "fighting", rating: 9, completed: "True", playtime: 20},
+	{name: "Paper Mario", console: "Nintendo64", genre: "RPG",rating: 7, completed: "True", playtime: 6.25},
+	{name: "Super Mario 64", console: "Nintendo64", genre: "Adventure", rating: 8, completed: "True", playtime: 12},
+	{name: "StarFox64", console: "Nintendo64", genre: "Shooter", rating: 7, completed: "False", playtime: 5.25},
+	{name: "Banjo Kazooie", console: "Nintendo64", genre: "Adventure", rating: 6, completed: "False", playtime: 3},
+	{name: "Banjo Tooie", console: "Nintendo64", genre: "Adventure", rating: 8, completed: "False", playtime: 1.5},
+	{name: "The Legend of Zelda Ocarina of Time", console: "Nintendo64", genre: "Adventure", rating: 10, completed: "True", playime: 16},
+	{name: "The Legend of Zelda Majoras Mask", console: "Nintendo64", genre: "Adventure", rating: 10, completed: "False", playtime: 10},
+	{name: "Dissidia Final Fantasy", console: "PSP", genre: "Fighting", rating: 9, completed: "True", playtime: 12},
+	{name: "Mortal Kombat", console: "SuperNintendo", genre: "Fighting", rating: 6, completed: "True", playtime: 4},
+	{name: "Street Fighter", console: "SuperNintendo", genre: "Fighting", rating: 7, completed: "True", playtime: 2.5},
+	{name: "Final Fantasy", console: "SuperNintendo", genre: "RPG", rating: 8, completed: "True", playtime: 10.5},
+	{name: "Final Fantasy II", console: "SuperNintendo", genre: "RPG", rating: 7, completed: "False", playtime: 3.5},
+	{name: "Final Fantasy X", console: "Playstation2", genre: "RPG", rating: 10, completed: "False", playtime: 10},
+	{name: "Kingdom Hearts", console: "Playstation2", genre: "RPG", rating: 8, completed: "True", playtime: 12},
+	{name: "Super Mario Sunshine", console: "Gamecube", genre: "Adventure", rating: 8, completed: "True", playtime: 6},
 ]
-function filter(array, test) {
-	var passed = [];
-	for (var i = 0; i < array.length; i++){
-	if(test(array[i]))
-		passed.push(array[i]);
-	}
-	return passed;
-}
-console.log(filter(data, function(game){ return game.rating > 8}));
+
+//console.log(data);
+
+var newArray = []
+ data.filter(function (el) {
+	
+	return el.console.indexOf("Nintendo64")
+});
+//console.log(newArray); 
+	
+
+var playtimetot = data.reduce(function(a,b){
+
+return a + b.playtime}
+, 0 )
+console.log(playtimetot);
+
+
+
+
+
+
+
+
+
